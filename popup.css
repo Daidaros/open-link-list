@@ -1,0 +1,69 @@
+:root {
+  color: #172033;
+  font: 14px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body { margin: 0; width: 330px; }
+main { padding: 16px; }
+h1 { font-size: 18px; margin: 0 0 4px; }
+p { color: #596579; margin: 0 0 12px; }
+textarea {
+  box-sizing: border-box;
+  border: 1px solid #b8c3d6;
+  border-radius: 7px;
+  font: inherit;
+  height: 150px;
+  padding: 9px;
+  resize: vertical;
+  width: 100%;
+}
+textarea:focus { border-color: #2563eb; outline: 2px solid #bfdbfe; }
+.checkbox-row { align-items: center; display: flex; gap: 7px; margin-top: 11px; }
+.checkbox-row input { margin: 0; }
+#group-options { margin-top: 10px; }
+#group-options label, .field-label { display: block; font-weight: 600; margin: 8px 0 4px; }
+#group-options input {
+  box-sizing: border-box;
+  border: 1px solid #b8c3d6;
+  border-radius: 6px;
+  font: inherit;
+  padding: 7px;
+  width: 100%;
+}
+#group-colors { display: flex; gap: 9px; margin-top: 7px; }
+.color-dot {
+  border: 3px solid transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
+  cursor: pointer;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  width: 24px;
+}
+.color-dot:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; }
+.color-dot.selected { background-clip: padding-box; border-color: #697076; }
+.color-dot.grey { background-color: #697076; }
+.color-dot.grey.selected { background-color: white; }
+.color-dot.blue { background-color: #1a73e8; }
+.color-dot.red { background-color: #d93025; }
+.color-dot.yellow { background-color: #f9ab00; }
+.color-dot.green { background-color: #188038; }
+.color-dot.pink { background-color: #d01884; }
+.color-dot.purple { background-color: #9334e6; }
+.color-dot.cyan { background-color: #007b83; }
+.color-dot.orange { background-color: #fa903e; }
+#open {
+  background: #2563eb;
+  border: 0;
+  border-radius: 7px;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  margin-top: 10px;
+  padding: 9px 12px;
+  width: 100%;
+}
+#open:hover { background: #1d4ed8; }
+#status { margin: 8px 0 0; min-height: 20px; }

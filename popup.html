@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-i18n="extensionName">Open links</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <h1 data-i18n="extensionName">Open links</h1>
+      <p data-i18n="pasteHint">Paste URLs, one per line or within any text.</p>
+      <textarea id="urls" autofocus data-i18n-placeholder="urlPlaceholder" placeholder="https://example.com&#10;https://another-example.com"></textarea>
+      <label class="checkbox-row">
+        <input id="group-tabs" type="checkbox">
+        <span data-i18n="addToGroup">Add to a tab group</span>
+      </label>
+      <section id="group-options" hidden>
+        <label for="group-name" data-i18n="groupName">Group name</label>
+        <input id="group-name" type="text" data-i18n-placeholder="groupNamePlaceholder" placeholder="For example: Reading">
+        <span class="field-label" data-i18n="color">Color</span>
+        <div id="group-colors" role="radiogroup" data-i18n-aria-label="groupColor" aria-label="Group color">
+          <button class="color-dot grey selected" type="button" role="radio" aria-checked="true" data-i18n-aria-label="grey" aria-label="Grey" data-color="grey"></button>
+          <button class="color-dot blue" type="button" role="radio" aria-checked="false" data-i18n-aria-label="blue" aria-label="Blue" data-color="blue"></button>
+          <button class="color-dot red" type="button" role="radio" aria-checked="false" data-i18n-aria-label="red" aria-label="Red" data-color="red"></button>
+          <button class="color-dot yellow" type="button" role="radio" aria-checked="false" data-i18n-aria-label="yellow" aria-label="Yellow" data-color="yellow"></button>
+          <button class="color-dot green" type="button" role="radio" aria-checked="false" data-i18n-aria-label="green" aria-label="Green" data-color="green"></button>
+          <button class="color-dot pink" type="button" role="radio" aria-checked="false" data-i18n-aria-label="pink" aria-label="Pink" data-color="pink"></button>
+          <button class="color-dot purple" type="button" role="radio" aria-checked="false" data-i18n-aria-label="purple" aria-label="Purple" data-color="purple"></button>
+          <button class="color-dot cyan" type="button" role="radio" aria-checked="false" data-i18n-aria-label="cyan" aria-label="Cyan" data-color="cyan"></button>
+          <button class="color-dot orange" type="button" role="radio" aria-checked="false" data-i18n-aria-label="orange" aria-label="Orange" data-color="orange"></button>
+        </div>
+      </section>
+      <button id="open" type="button" data-i18n="openInTabs">Open in tabs</button>
+      <p id="status" aria-live="polite"></p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

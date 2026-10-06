@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <rect width="48" height="48" rx="11" fill="#1a73e8"/>
+  <!-- Material Symbols Outlined: tab_group (24 px, regular weight) -->
+  <path fill="#fff" d="M13 14c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h14v-3H14V17h20v10h3V16c0-1.1-.9-2-2-2H13Zm17 8c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h7c1.1 0 2-.9 2-2V24c0-1.1-.9-2-2-2h-7Zm1 3h5v8h-5v-8Z"/>
+</svg>

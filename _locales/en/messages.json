@@ -1,0 +1,23 @@
+{
+  "extensionName": { "message": "Open Link List" },
+  "extensionDescription": { "message": "Paste a list of URLs and open them in separate tabs." },
+  "pasteHint": { "message": "Paste URLs, one per line or within any text." },
+  "urlPlaceholder": { "message": "https://example.com\nhttps://another-example.com" },
+  "addToGroup": { "message": "Add to a tab group" },
+  "groupName": { "message": "Group name" },
+  "groupNamePlaceholder": { "message": "For example: Reading" },
+  "color": { "message": "Color" },
+  "groupColor": { "message": "Group color" },
+  "grey": { "message": "Grey" }, "blue": { "message": "Blue" }, "red": { "message": "Red" },
+  "yellow": { "message": "Yellow" }, "green": { "message": "Green" }, "pink": { "message": "Pink" },
+  "purple": { "message": "Purple" }, "cyan": { "message": "Cyan" }, "orange": { "message": "Orange" },
+  "openInTabs": { "message": "Open in tabs" },
+  "noUrls": { "message": "No valid URLs found." },
+  "opening": { "message": "Opening links…" },
+  "defaultGroupName": { "message": "Links" },
+  "openedOne": { "message": "$COUNT$ link opened.", "placeholders": { "count": { "content": "$1" } } },
+  "openedMany": { "message": "$COUNT$ links opened.", "placeholders": { "count": { "content": "$1" } } },
+  "openedOneGrouped": { "message": "$COUNT$ link opened and grouped.", "placeholders": { "count": { "content": "$1" } } },
+  "openedManyGrouped": { "message": "$COUNT$ links opened and grouped.", "placeholders": { "count": { "content": "$1" } } },
+  "openError": { "message": "Could not open every link." }
+}

@@ -1,0 +1,23 @@
+{
+  "extensionName": { "message": "Abrir lista de enlaces" },
+  "extensionDescription": { "message": "Pega una lista de URL y ábrelas en pestañas separadas." },
+  "pasteHint": { "message": "Pega URL, una por línea o dentro de cualquier texto." },
+  "urlPlaceholder": { "message": "https://ejemplo.com\nhttps://otro-ejemplo.com" },
+  "addToGroup": { "message": "Agregar a un grupo de pestañas" },
+  "groupName": { "message": "Nombre del grupo" },
+  "groupNamePlaceholder": { "message": "Por ejemplo: Lecturas" },
+  "color": { "message": "Color" },
+  "groupColor": { "message": "Color del grupo" },
+  "grey": { "message": "Gris" }, "blue": { "message": "Azul" }, "red": { "message": "Rojo" },
+  "yellow": { "message": "Amarillo" }, "green": { "message": "Verde" }, "pink": { "message": "Rosa" },
+  "purple": { "message": "Morado" }, "cyan": { "message": "Celeste" }, "orange": { "message": "Naranjo" },
+  "openInTabs": { "message": "Abrir en pestañas" },
+  "noUrls": { "message": "No encontré URL válidas." },
+  "opening": { "message": "Abriendo enlaces…" },
+  "defaultGroupName": { "message": "Enlaces" },
+  "openedOne": { "message": "$COUNT$ enlace abierto.", "placeholders": { "count": { "content": "$1" } } },
+  "openedMany": { "message": "$COUNT$ enlaces abiertos.", "placeholders": { "count": { "content": "$1" } } },
+  "openedOneGrouped": { "message": "$COUNT$ enlace abierto y agrupado.", "placeholders": { "count": { "content": "$1" } } },
+  "openedManyGrouped": { "message": "$COUNT$ enlaces abiertos y agrupados.", "placeholders": { "count": { "content": "$1" } } },
+  "openError": { "message": "No pude abrir todos los enlaces." }
+}
