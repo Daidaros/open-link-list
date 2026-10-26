@@ -12,8 +12,7 @@ Open a pasted list of URLs in separate browser tabs. You can optionally place th
 
 ## Project layout
 
-- `src/`: shared popup, translations, and icons.
-- `browsers/chrome/`: Chrome manifest.
+- Repository root: loadable Chrome extension, including its manifest, popup, translations, and icons.
 - `browsers/firefox/`: Firefox port notes.
 - `browsers/safari/`: Safari port notes.
 - `scripts/build.mjs`: assembles a browser extension from shared files and a browser manifest.
@@ -21,11 +20,11 @@ Open a pasted list of URLs in separate browser tabs. You can optionally place th
 
 ## Build and install Chrome locally
 
-Run `node scripts/build.mjs chrome` from this repository. This creates `build/chrome/` and a ZIP file in `build/`.
+The repository root is directly loadable in Chrome. Run `node scripts/build.mjs chrome` only when you need a clean package. This creates `build/chrome/` and a ZIP file in `build/`.
 
 1. Open `chrome://extensions` in Chrome.
 2. Enable **Developer mode**.
-3. Click **Load unpacked** and select `build/chrome/`.
+3. Click **Load unpacked** and select this repository's root directory. If it is already loaded, click **Reload** on its extension card.
 4. Optionally, pin the extension from Chrome's Extensions menu.
 
 The extension processes pasted URLs locally. It does not collect or send them to a service.
