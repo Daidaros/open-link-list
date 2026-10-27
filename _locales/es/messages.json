@@ -6,7 +6,7 @@
   "addToGroup": { "message": "Agregar a un grupo de pestañas" },
   "groupName": { "message": "Nombre del grupo" },
   "groupNamePlaceholder": { "message": "Por ejemplo: Lecturas" },
-  "rememberGroupName": { "message": "Recordar este nombre" },
+  "rememberGroupSettings": { "message": "Recordar nombre y color" },
   "color": { "message": "Color" },
   "groupColor": { "message": "Color del grupo" },
   "grey": { "message": "Gris" }, "blue": { "message": "Azul" }, "red": { "message": "Rojo" },

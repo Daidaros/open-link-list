@@ -1,12 +1,12 @@
 # Open Link List
 
-Open a pasted list of URLs in separate browser tabs. You can optionally place the new tabs in a named, colored group and remember its name for the next use. The interface includes English and Spanish.
+Open a pasted list of URLs in separate browser tabs. You can optionally place the new tabs in a named, colored group and remember its name and color for the next use. The interface includes English and Spanish.
 
 ## Browser support
 
 | Browser | Status |
 | --- | --- |
-| Chrome | Working extension, version 1.1.3 |
+| Chrome | Working extension, version 1.1.4 |
 | Firefox | Port planned; compatibility and packaging still need testing |
 | Safari | Port planned; API compatibility and Apple packaging still need testing |
 

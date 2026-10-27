@@ -4,13 +4,25 @@ const status = document.querySelector("#status");
 const groupTabs = document.querySelector("#group-tabs");
 const groupOptions = document.querySelector("#group-options");
 const groupName = document.querySelector("#group-name");
-const rememberGroupName = document.querySelector("#remember-group-name");
+const rememberGroupSettings = document.querySelector("#remember-group-settings");
 const colorButtons = document.querySelectorAll(".color-dot");
 let groupColor = "grey";
 
-rememberGroupName.checked = localStorage.getItem("rememberGroupName") === "true";
-if (rememberGroupName.checked) {
+function selectGroupColor(colorButton) {
+  groupColor = colorButton.dataset.color;
+  colorButtons.forEach((button) => {
+    const isSelected = button === colorButton;
+    button.classList.toggle("selected", isSelected);
+    button.setAttribute("aria-checked", String(isSelected));
+  });
+}
+
+rememberGroupSettings.checked = localStorage.getItem("rememberGroupName") === "true";
+if (rememberGroupSettings.checked) {
   groupName.value = localStorage.getItem("groupName") || "";
+  const savedColor = localStorage.getItem("groupColor");
+  const savedColorButton = [...colorButtons].find((button) => button.dataset.color === savedColor);
+  if (savedColorButton) selectGroupColor(savedColorButton);
 }
 
 document.querySelectorAll("[data-i18n]").forEach((element) => {
@@ -36,28 +48,26 @@ groupTabs.addEventListener("change", () => {
   if (groupTabs.checked) groupName.focus();
 });
 
-rememberGroupName.addEventListener("change", () => {
-  if (rememberGroupName.checked) {
+rememberGroupSettings.addEventListener("change", () => {
+  if (rememberGroupSettings.checked) {
     localStorage.setItem("rememberGroupName", "true");
     localStorage.setItem("groupName", groupName.value);
+    localStorage.setItem("groupColor", groupColor);
   } else {
     localStorage.removeItem("rememberGroupName");
     localStorage.removeItem("groupName");
+    localStorage.removeItem("groupColor");
   }
 });
 
 groupName.addEventListener("input", () => {
-  if (rememberGroupName.checked) localStorage.setItem("groupName", groupName.value);
+  if (rememberGroupSettings.checked) localStorage.setItem("groupName", groupName.value);
 });
 
 colorButtons.forEach((colorButton) => {
   colorButton.addEventListener("click", () => {
-    groupColor = colorButton.dataset.color;
-    colorButtons.forEach((button) => {
-      const isSelected = button === colorButton;
-      button.classList.toggle("selected", isSelected);
-      button.setAttribute("aria-checked", String(isSelected));
-    });
+    selectGroupColor(colorButton);
+    if (rememberGroupSettings.checked) localStorage.setItem("groupColor", groupColor);
   });
 });
 
