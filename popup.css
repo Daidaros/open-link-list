@@ -21,8 +21,8 @@ textarea:focus { border-color: #2563eb; outline: 2px solid #bfdbfe; }
 .checkbox-row { align-items: center; display: flex; gap: 7px; margin-top: 11px; }
 .checkbox-row input { margin: 0; }
 #group-options { margin-top: 10px; }
-#group-options label, .field-label { display: block; font-weight: 600; margin: 8px 0 4px; }
-#group-options input {
+#group-options label:not(.checkbox-row), .field-label { display: block; font-weight: 600; margin: 8px 0 4px; }
+#group-options input[type="text"] {
   box-sizing: border-box;
   border: 1px solid #b8c3d6;
   border-radius: 6px;
@@ -30,6 +30,7 @@ textarea:focus { border-color: #2563eb; outline: 2px solid #bfdbfe; }
   padding: 7px;
   width: 100%;
 }
+#group-options .remember-row { font-weight: 400; margin: 8px 0 10px; }
 #group-colors { display: flex; gap: 9px; margin-top: 7px; }
 .color-dot {
   border: 3px solid transparent;

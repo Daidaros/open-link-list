@@ -6,6 +6,7 @@
   "addToGroup": { "message": "Add to a tab group" },
   "groupName": { "message": "Group name" },
   "groupNamePlaceholder": { "message": "For example: Reading" },
+  "rememberGroupName": { "message": "Remember this name" },
   "color": { "message": "Color" },
   "groupColor": { "message": "Group color" },
   "grey": { "message": "Grey" }, "blue": { "message": "Blue" }, "red": { "message": "Red" },

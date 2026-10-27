@@ -4,8 +4,14 @@ const status = document.querySelector("#status");
 const groupTabs = document.querySelector("#group-tabs");
 const groupOptions = document.querySelector("#group-options");
 const groupName = document.querySelector("#group-name");
+const rememberGroupName = document.querySelector("#remember-group-name");
 const colorButtons = document.querySelectorAll(".color-dot");
 let groupColor = "grey";
+
+rememberGroupName.checked = localStorage.getItem("rememberGroupName") === "true";
+if (rememberGroupName.checked) {
+  groupName.value = localStorage.getItem("groupName") || "";
+}
 
 document.querySelectorAll("[data-i18n]").forEach((element) => {
   element.textContent = chrome.i18n.getMessage(element.dataset.i18n);
@@ -28,6 +34,20 @@ function extractUrls(text) {
 groupTabs.addEventListener("change", () => {
   groupOptions.hidden = !groupTabs.checked;
   if (groupTabs.checked) groupName.focus();
+});
+
+rememberGroupName.addEventListener("change", () => {
+  if (rememberGroupName.checked) {
+    localStorage.setItem("rememberGroupName", "true");
+    localStorage.setItem("groupName", groupName.value);
+  } else {
+    localStorage.removeItem("rememberGroupName");
+    localStorage.removeItem("groupName");
+  }
+});
+
+groupName.addEventListener("input", () => {
+  if (rememberGroupName.checked) localStorage.setItem("groupName", groupName.value);
 });
 
 colorButtons.forEach((colorButton) => {
